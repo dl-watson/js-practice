@@ -6,5 +6,8 @@
  * @returns {Array}
  */
 export const fromPairs = (array) => {
-  throw new Error(`put your solution here ${array}`);
+  return array.reduce((acc, cur) => {
+    acc = { ...acc, ...{ [cur[0]]: cur[1] } };
+    return acc;
+  }, {});
 };
