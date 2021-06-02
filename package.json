@@ -7,7 +7,7 @@
     "test": "jest",
     "testObjects": "jest /objects/exercises/",
     "testObjectsSolutions": "jest /objects/solutions/",
-    "testArrays": "jest /arrays/exercises/",
+    "testArrays": "jest /arrays/exercises/ --watch",
     "testArraysSolutions": "jest /arrays/solutions/",
     "lint": "eslint \"*/**\""
   },
@@ -32,5 +32,6 @@
     "eslint-plugin-import": "^2.20.2",
     "jest": "^25.5.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "type": "module"
 }
