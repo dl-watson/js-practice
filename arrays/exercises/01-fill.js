@@ -9,5 +9,3 @@
 export const fill = (arraySize, value) => {
   return new Array(arraySize).fill(value);
 };
-
-fill(3, 0);
