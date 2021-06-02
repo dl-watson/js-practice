@@ -5,6 +5,4 @@
  * @param {Array} array - An array of any elements
  * @returns {Array}
  */
-export const compact = (array) => {
-  throw new Error(`put your solution here ${array}`);
-};
+export const compact = (array) => array.filter((x) => x);
