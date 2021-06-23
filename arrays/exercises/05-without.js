@@ -7,34 +7,6 @@
  * @returns {Array}
  */
 export const without = (array, ...args) => {
-  // // sort the input array
-  // const sorted = array.sort((a, b) => a - b);
-  // // sort the args array
-  // const sortargs = args.sort((a, b) => a - b);
-
-  // let idx = 0;
-  // for (let arg of sortargs) {
-  //   console.log("arg", arg);
-
-  //   while (idx < sorted.length - 1) {
-  //     if (sorted[idx] === arg) {
-  //       console.log("equivalence");
-  //       sorted[idx] = null;
-  //       idx++;
-  //     } else if (sorted[idx] < arg) {
-  //       console.log("less than");
-  //       idx++;
-  //     } else if (sorted[idx] > arg) {
-  //       console.log("greater than");
-  //       break;
-  //     }
-  //   }
-  // }
-
-  // console.log("sorted", sorted);
-
-  // return sorted.filter((x) => x);
-
   return array
     .map((arr) => {
       args.map((arg) => {
@@ -45,7 +17,7 @@ export const without = (array, ...args) => {
       });
       return arr;
     })
-    .filter((x) => x);
+    .filter((x) => x != null);
 };
 
 without([1, 2, 3, 1, 2], 1, 2);
