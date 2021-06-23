@@ -7,5 +7,6 @@
  * @returns {boolean}
  */
 export const isEqual = (firstArray, secondArray) => {
-  throw new Error(`put your solution here ${firstArray} ${secondArray}`);
+  if (JSON.stringify(firstArray) === JSON.stringify(secondArray)) return true;
+  return false;
 };
