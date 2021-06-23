@@ -7,5 +7,21 @@
  * @returns {Array}
  */
 export const without = (array, ...args) => {
-  throw new Error(`put your solution here ${array} ${args}`);
+  // a very inefficient algorithm that involves mapping over the array,
+  // comparing each array item against all items in the args array, and setting that
+  // value to null if it matches
+  // at the end, it filters for all valid values (not-null)
+  return array
+    .map((arr) => {
+      args.map((arg) => {
+        if (arg === arr) {
+          arr = null;
+        }
+        return arg;
+      });
+      return arr;
+    })
+    .filter((x) => x);
 };
+
+without([1, 2, 3, 1, 2], 1, 2);
