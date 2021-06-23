@@ -29,6 +29,9 @@
     "prefer-destructuring": "off",
     "array-callback-return": "off",
     "consistent-return": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "prefer-const": "off",
+    "single-quote": "false"
   }
 }

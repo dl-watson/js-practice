@@ -7,10 +7,34 @@
  * @returns {Array}
  */
 export const without = (array, ...args) => {
-  // a very inefficient algorithm that involves mapping over the array,
-  // comparing each array item against all items in the args array, and setting that
-  // value to null if it matches
-  // at the end, it filters for all valid values (not-null)
+  // // sort the input array
+  // const sorted = array.sort((a, b) => a - b);
+  // // sort the args array
+  // const sortargs = args.sort((a, b) => a - b);
+
+  // let idx = 0;
+  // for (let arg of sortargs) {
+  //   console.log("arg", arg);
+
+  //   while (idx < sorted.length - 1) {
+  //     if (sorted[idx] === arg) {
+  //       console.log("equivalence");
+  //       sorted[idx] = null;
+  //       idx++;
+  //     } else if (sorted[idx] < arg) {
+  //       console.log("less than");
+  //       idx++;
+  //     } else if (sorted[idx] > arg) {
+  //       console.log("greater than");
+  //       break;
+  //     }
+  //   }
+  // }
+
+  // console.log("sorted", sorted);
+
+  // return sorted.filter((x) => x);
+
   return array
     .map((arr) => {
       args.map((arg) => {
