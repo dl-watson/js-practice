@@ -6,5 +6,6 @@
  * @returns {Array}
  */
 export const unique = (array) => {
-  throw new Error(`put your solution here ${array}`);
+  // your code here
+  return Array.from(new Set(array));
 };
