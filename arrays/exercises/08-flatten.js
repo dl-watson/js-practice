@@ -5,6 +5,17 @@
  * @param {Array} array - A deep array
  * @returns {Array}
  */
+
 export const flatten = (array) => {
-  throw new Error(`put your solution here ${array}`);
+  return array.reduce((acc, cur) => {
+    if (typeof cur == "number") {
+      acc = acc.concat(cur)
+    } else {
+      acc = acc.concat(flatten(cur))
+    }
+    return acc
+  }, [])
+
 };
+
+flatten([1, 2, [3, 4, [5]]]);
