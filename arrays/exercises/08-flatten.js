@@ -5,6 +5,7 @@
  * @param {Array} array - A deep array
  * @returns {Array}
  */
+
 export const flatten = (array) => {
   // case for reduce
   // for each element, check whether it is an array or a number
@@ -14,3 +15,5 @@ export const flatten = (array) => {
     return acc.concat(typeof cur === "object" ? flatten(cur) : cur);
   }, []);
 };
+
+flatten([1, 2, [3, 4, [5]]]);
