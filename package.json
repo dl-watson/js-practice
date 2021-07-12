@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "testObjects": "jest /objects/exercises/",
+    "testObjects": "jest /objects/exercises/ --watch",
     "testObjectsSolutions": "jest /objects/solutions/",
     "testArrays": "jest /arrays/exercises/ --watch",
     "testArraysSolutions": "jest /arrays/solutions/",
