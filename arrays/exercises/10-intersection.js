@@ -6,5 +6,15 @@
  * @returns {Array}
  */
 export const intersection = (...arrays) => {
-  throw new Error(`put your solution here ${arrays}`);
+  const result = arrays[0].filter((elem) => {
+    const index = arrays[1].indexOf(elem);
+    if (index >= 0) return elem;
+    else return null;
+  });
+
+  if (result != null && arrays.length > 2) {
+    intersection(result, ...arrays.slice(2, arrays.length));
+  }
+
+  return Array.from(new Set(result));
 };
