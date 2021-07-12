@@ -7,7 +7,5 @@
  */
 export const isPlainObject = (element) => {
   // !!element covers a case where element = null
-  return typeof element == "object" && !Array.isArray(element) && !!element
-    ? true
-    : false;
+  return typeof element == "object" && !Array.isArray(element) && !!element;
 };
