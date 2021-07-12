@@ -6,5 +6,11 @@
  * @returns {Array}
  */
 export const flatten = (array) => {
-  throw new Error(`put your solution here ${array}`);
+  // case for reduce
+  // for each element, check whether it is an array or a number
+  // if it is an array, we'll need to recursively repeat the same check
+  // if it's a number, concat this value to our accumulator
+  return array.reduce((acc, cur) => {
+    return acc.concat(typeof cur === "object" ? flatten(cur) : cur);
+  }, []);
 };
