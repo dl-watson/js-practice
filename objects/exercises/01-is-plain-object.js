@@ -6,5 +6,8 @@
  * @returns {boolean}
  */
 export const isPlainObject = (element) => {
-  throw new Error(`put your solution here ${element}`);
+  // !!element covers a case where element = null
+  return typeof element == "object" && !Array.isArray(element) && !!element
+    ? true
+    : false;
 };
