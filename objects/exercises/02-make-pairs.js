@@ -5,4 +5,10 @@
  * @param {Object} object - Any object to transform into array
  * @returns {Array} - a deep array
  */
-export const makePairs = (object) => {};
+export const makePairs = (object) => {
+  let buffer = [];
+  for (let key in object) {
+    buffer.push([key, object[key]]);
+  }
+  return buffer;
+};
