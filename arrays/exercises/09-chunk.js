@@ -7,5 +7,18 @@
  * @returns {Array}
  */
 export const chunk = (array, size) => {
-  throw new Error(`put your solution here ${array} ${size}`);
+  // initialize a buffer array
+  const buffer = [];
+  // track the index, starting at 0
+  let index = 0;
+  // loop over the input array, while the index is less than the length of the array
+  while (index < array.length) {
+    // a slice will return an array
+    // so we'll take a slice from the current index to index + size and add this to our buffer
+    buffer.push(array.slice(index, index + size));
+    // increment the index by the size
+    index += size;
+  }
+
+  return buffer;
 };
