@@ -7,5 +7,9 @@
  * @returns {Object} - New object without listed values
  */
 export const without = (object, ...args) => {
-  throw new Error(`put your solution here ${object} ${args}`);
+  let obj = { ...object };
+  for (let arg of args) {
+    delete obj[arg];
+  }
+  return obj;
 };
