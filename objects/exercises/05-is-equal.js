@@ -7,5 +7,6 @@
  * @returns {boolean}
  */
 export const isEqual = (firstObj, secondObj) => {
-  throw new Error(`put your solution here ${firstObj} ${secondObj}`);
+  // note that JSON.stringify shouldn't be used in all cases (it can ignore keys whose value is undefined, and is appropriate for a shallow compare only)
+  return JSON.stringify(firstObj) == JSON.stringify(secondObj);
 };
